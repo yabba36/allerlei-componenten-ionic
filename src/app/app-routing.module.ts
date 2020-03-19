@@ -8,24 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
-  // fivethree
-  { path: 'fivethree', loadChildren: () => import('./pages/fivethree/fivethree.module').then(m => m.FivethreePageModule) },
-  { path: 'app-bar', loadChildren: () => import('./pages/fivethree/components/app-bar/app-bar.module').then(m => m.AppBarPageModule) },
-  { path: 'bottom-sheet', loadChildren: () => import('./pages/fivethree/components/bottom-sheet/bottom-sheet.module').then(m => m.BottomSheetPageModule) },
-  { path: 'gallery', loadChildren: () => import('./pages/fivethree/components/gallery/gallery.module').then(m => m.GalleryPageModule) },
-  { path: 'stepper', loadChildren: () => import('./pages/fivethree/components/stepper/stepper.module').then(m => m.StepperPageModule) },
-  { path: 'feature-discovery', loadChildren: () => import('./pages/fivethree/components/feature-discovery/feature-discovery.module').then(m => m.FeatureDiscoveryPageModule) },
-  { path: 'dialog', loadChildren: () => import('./pages/fivethree/components/dialog/dialog.module').then(m => m.DialogPageModule) },
-  { path: 'editable-label', loadChildren: () => import('./pages/fivethree/components/editable-label/editable-label.module').then(m => m.EditableLabelPageModule) },
-  { path: 'expandable', loadChildren: () => import('./pages/fivethree/components/expandable/expandable.module').then(m => m.ExpandablePageModule) },
-  { path: 'searchbar', loadChildren: () => import('./pages/fivethree/components/searchbar/searchbar.module').then(m => m.SearchbarPageModule) },
-  { path: 'fab', loadChildren: () => import('./pages/fivethree/components/fab/fab.module').then(m => m.FabPageModule) },
-  { path: 'icon', loadChildren: () => import('./pages/fivethree/components/icon/icon.module').then(m => m.IconPageModule) },
-  { path: 'loading', loadChildren: () => import('./pages/fivethree/components/loading/loading.module').then(m => m.LoadingPageModule) },
-  { path: 'password', loadChildren: () => import('./pages/fivethree/components/password/password.module').then(m => m.PasswordPageModule) },
-  { path: 'refresh', loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then(m => m.RefreshPageModule) },
-  { path: 'viewport', loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then(m => m.ViewportPageModule) },
-  { path: 'buttons', loadChildren: () => import('./pages/fivethree/components/buttons/buttons.module').then(m => m.ButtonsPageModule) },
+ 
   // Yannbf
   { path: 'yannbf', loadChildren: () => import('./pages/yannbf/yannbf.module').then(m => m.YannbfPageModule) },
   { path: 'accordion-list', loadChildren: () => import('./pages/yannbf/components/accordion-list/accordion-list.module').then(m => m.AccordionListPageModule) },
@@ -83,6 +66,44 @@ const routes: Routes = [
   { path: 'mat-drag-drop', loadChildren: () => import('./pages/angular-material/components/mat-drag-drop/mat-drag-drop.module').then(m => m.MatDragDropPageModule) },
   { path: 'mat-input', loadChildren: () => import('./pages/angular-material/components/mat-input/mat-input.module').then(m => m.MatInputPageModule) },
   { path: 'mat-grid', loadChildren: () => import('./pages/angular-material/components/mat-grid/mat-grid.module').then(m => m.MatGridPageModule) },
+ 
+  {
+    path: 'timeline',
+    loadChildren: () => import('./pages/yannbf/components/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },
+  {
+    path: 'crypto-list',
+    loadChildren: () => import('./pages/yannbf/components/lists/crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
+  },
+  {
+    path: 'list-card-ui',
+    loadChildren: () => import('./pages/yannbf/components/lists/list-card-ui/list-card-ui.module').then( m => m.ListCardUiPageModule)
+  },
+  {
+    path: 'reactive-list-label',
+    loadChildren: () => import('./pages/yannbf/components/lists/reactive-list-label/reactive-list-label.module').then( m => m.ReactiveListLabelPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/yannbf/components/lists/users/users.module').then( m => m.UsersPageModule)
+  },
+
+  {
+    path: 'official',
+    loadChildren: () => import('./pages/official/official.module').then( m => m.OfficialPageModule)
+  },
+
+  {
+    path: 'buttons-official',
+    loadChildren: () => import('./pages/official/components/buttons/buttons.module').then( m => m.ButtonsPageModule)
+  },
+  {
+    path: 'alerts',
+    loadChildren: () => import('./pages/official/components/alerts/alerts.module').then( m => m.AlertsPageModule)
+  },
+  
+
+
 
 ];
 
